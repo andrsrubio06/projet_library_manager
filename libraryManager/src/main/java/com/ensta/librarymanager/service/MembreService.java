@@ -1,7 +1,8 @@
+package com.ensta.librarymanager.service;
 import java.util.List;
 
 import com.ensta.librarymanager.exception.ServiceException;
-import com.ensta.librarymanager.modele.Membre;
+import com.ensta.librarymanager.model.Membre;
 
 public interface MembreService {
 

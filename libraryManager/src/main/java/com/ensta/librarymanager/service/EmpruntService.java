@@ -1,9 +1,11 @@
+package com.ensta.librarymanager.service;
+
 import java.time.LocalDate;
 import java.util.List;
 
 import com.ensta.librarymanager.exception.ServiceException;
-import com.ensta.librarymanager.modele.Emprunt;
-import com.ensta.librarymanager.modele.Membre;
+import com.ensta.librarymanager.model.Emprunt;
+import com.ensta.librarymanager.model.Membre;
 
 public interface EmpruntService {
 	public List<Emprunt> getList() throws ServiceException;
