@@ -9,6 +9,9 @@ import java.util.List;
 
 import org.h2.tools.DeleteDbFiles;
 
+import com.ensta.librarymanager.persistence.ConnectionManager;
+
+
 public class FillDatabase {
 
 
