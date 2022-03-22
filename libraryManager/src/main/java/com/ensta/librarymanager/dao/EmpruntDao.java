@@ -1,8 +1,10 @@
+package com.ensta.librarymanager.dao;
+
 import java.time.LocalDate;
 import java.util.List;
 
 import com.ensta.librarymanager.exception.DaoException;
-import com.ensta.librarymanager.modele.Emprunt;
+import com.ensta.librarymanager.model.Emprunt;
 
 public interface EmpruntDao {
 	public List<Emprunt> getList() throws DaoException;

@@ -1,7 +1,9 @@
+package com.ensta.librarymanager.dao;
+
 import java.util.List;
 
 import com.ensta.librarymanager.exception.DaoException;
-import com.ensta.librarymanager.modele.Membre;
+import com.ensta.librarymanager.model.Membre;
 
 public interface MembreDao {
 	public List<Membre> getList() throws DaoException;
