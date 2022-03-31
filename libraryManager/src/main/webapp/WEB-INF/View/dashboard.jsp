@@ -70,20 +70,8 @@
                 </thead>
                 <tbody id="results">
                 
-                    <tr>
-                        <c:if test="${! empty emprunts }">
-                          <c:forEach var="emprunt" items="${emprunts}">
-                            <tr>
-                              <td>${emprunt.livre.titre}, <em>de ${emprunt.livre.auteur}</em></td>
-                              <td>${emprunt.membre.prenom}  ${emprunt.membre.nom}</td>
-                              <td>${emprunt.dateEmprunt}</td>
-                              <td>
-                                  <a href="emprunt_return?id=${emprunt.id}"><ion-icon class="table-item" name="log-in"></a>
-                              </td>
-                            </tr>
-                          </c:forEach>
-                        </c:if>
-                    </tr>
+                    
+                    
                     
                      <!-- TODO : parcourir la liste des emprunts en cours et les afficher selon la structure d'exemple ci-dessus -->
                 </tbody>

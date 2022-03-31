@@ -21,9 +21,9 @@
       </div>
       <div class="row">
       <div class="container">
-      <h5>Création d'un nouveau livre</h5>
+      <h5>Creation d'un nouveau livre</h5>
         <div class="row">
-	      <form action="/LibraryManager/livre_add" method="post" class="col s12">
+	      <form action="/TP3Ensta-1.0-SNAPSHOT/livre_add" method="post" class="col s12">
 	        <div class="row">
 	          <div class="input-field col m12 s12">
 	            <input id="titre" type="text" name="titre">

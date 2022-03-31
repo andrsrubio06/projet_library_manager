@@ -21,22 +21,33 @@
       </div>
       <div class="row">
       <div class="container">
-        <h5>Sélectionnez le livre et le membre emprunteur</h5>
+        <h5>Selectionnez le livre et le membre emprunteur</h5>
         <div class="row">
-	      <form action="/LibraryManager/emprunt_add" method="post" class="col s12">
+	      
+        <form action="/TP3Ensta-1.0-SNAPSHOT/emprunt_add" method="post" class="col s12">
 	        <div class="row">
 	          <div class="input-field col s6">
 	            <select id="idLivre" name="idLivre" class="browser-default">
 	              <option value="" disabled selected>-- Livres --</option>
-	              <!-- TODO : parcourir la liste des livres disponibles et afficher autant d'options que nécessaire, sur la base de l'exemple ci-dessous -->
-                  <option value="idDuLivre">"Titre du livre", de Nom de l'auteur</option>
+	              <!-- TODO : parcourir la liste des livres disponibles et afficher autant d'options que nï¿½cessaire, sur la base de l'exemple ci-dessous -->
+                <c:if test="${! empty ListOfBooks }">
+                  <c:forEach var="livre" items="${ListOfBooks}">
+                      <option value="${livre.id}">"${livre.titre}", ${livre.auteur}</option>      
+                  </c:forEach>
+                </c:if>    
+              
 	            </select>
 	          </div>
 	          <div class="input-field col s6">
 	            <select id="idMembre" name="idMembre" class="browser-default">
 	              <option value="" disabled selected>-- Membres --</option>
-	              <!-- TODO : parcourir la liste des membres pouvant emprunter et afficher autant d'options que nécessaire, sur la base de l'exemple ci-dessous -->
-                  <option value="idDuMembre">Prénom et nom du membre</option>
+	              <!-- TODO : parcourir la liste des membres pouvant emprunter et afficher autant d'options que nï¿½cessaire, sur la base de l'exemple ci-dessous -->
+                <c:if test="${! empty ListOfMembers }">
+                  <c:forEach var="member" items="${ListOfMembers}">
+                      <option value="${member.id}">${member.prenom} ${member.nom}</option>      
+                  </c:forEach>
+                </c:if>    
+                
 	            </select>
 	          </div>
 	        </div>
@@ -45,6 +56,7 @@
 	          <button class="btn waves-effect waves-light orange" type="reset">Annuler</button>
 	        </div>
 	      </form>
+
 	    </div>
       </div>
       </div>
