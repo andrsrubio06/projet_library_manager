@@ -67,7 +67,6 @@
                 </tr>
               </thead>
 
-
               <tbody id="results">
                 <c:if test="${! empty emprunts}">
                   <c:forEach var="emprunt" items="${emprunts}">
@@ -80,8 +79,7 @@
                     </tr>
                   </c:forEach>
                 </c:if>
-                
-
+          
 				<!-- TODO : parcourir la liste des emprunts en cours pour ce livre et les afficher selon la structure d'exemple ci-dessus -->
               </tbody>
             </table>

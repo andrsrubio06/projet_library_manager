@@ -1,7 +1,7 @@
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
-        Design © 2017 Farooq Designs. All rights reserved.
+        Design ï¿½ 2017 Farooq Designs. All rights reserved.
       </div>
     </div>
   </footer>
@@ -25,4 +25,5 @@
   });
 
   </script>
-  <script src="https://unpkg.com/ionicons@4.4.4/dist/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

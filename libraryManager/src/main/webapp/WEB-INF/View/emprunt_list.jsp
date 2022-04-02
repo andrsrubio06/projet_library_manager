@@ -41,10 +41,13 @@
                           <td>${emprunt.dateEmprunt}</td>
                           <c:if test="${emprunt.dateRetour != null}"> <!-- if its already returned-->
                               <td>${emprunt.dateRetour}</td>
-                            </c:if>
-                              <td>
-                                <a href="emprunt_return?id=${emprunt.id}"><ion-icon class="table-item" name="log-in"></a>
-                              </td>
+                          </c:if>
+                          <c:if test="${emprunt.dateRetour == null}"> <!-- if its already returned-->
+                              <td></td>
+                          </c:if>
+                          <td>
+                            <a href="emprunt_return?id=${emprunt.id}"><ion-icon class="table-item" name="log-in"></a>
+                          </td>
                     </c:forEach>
                   </c:if>
 

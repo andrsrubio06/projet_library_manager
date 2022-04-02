@@ -40,6 +40,7 @@
             </div>
             <div class="icon">
               <ion-icon name="book"></ion-icon>
+              
             </div>
             <a href="livre_list" class="small-box-footer" class="animsition-link">Liste des livres <i class="fa fa-arrow-circle-right"></i></a>
           </div>
@@ -71,7 +72,20 @@
                 <tbody id="results">
                 
                     
-                    
+                  <c:if test="${! empty emprunts }">
+                    <c:forEach var="emprunt" items="${emprunts}">  
+                      <tr>
+                          <td>${emprunt.livre.titre}, <em>de ${emprunt.livre.auteur}</em></td>
+                          <td>${emprunt.membre.prenom}  ${emprunt.membre.nom}</td>
+                          <td>${emprunt.dateEmprunt}</td>
+                          <c:if test="${emprunt.dateRetour != null}"> <!-- if its already returned-->
+                              <td>${emprunt.dateRetour}</td>
+                            </c:if>
+                              <td>
+                                <a href="emprunt_return?id=${emprunt.id}"><ion-icon class="table-item" name="log-in"></a>
+                              </td>
+                    </c:forEach>
+                  </c:if>
                     
                      <!-- TODO : parcourir la liste des emprunts en cours et les afficher selon la structure d'exemple ci-dessus -->
                 </tbody>
